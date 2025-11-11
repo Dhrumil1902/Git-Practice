@@ -1,0 +1,60 @@
+-- ===========================================
+--  SQL Practice File: Employee & Department
+-- ===========================================
+
+-- Step 1️: Drop tables if already exist
+DROP TABLE IF EXISTS employees;
+DROP TABLE IF EXISTS departments;
+
+-- Step 2️: Create the 'departments' table
+CREATE TABLE departments (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50),
+    location VARCHAR(50)
+);
+
+-- Step 3️: Create the 'employees' table
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(50),
+    dept_id INT,
+    salary DECIMAL(10,2),
+    hire_date DATE,
+    manager_id INT,
+    FOREIGN KEY (dept_id) REFERENCES departments(dept_id)
+);
+
+-- Step 4️: Insert sample data into 'departments'
+INSERT INTO departments (dept_id, dept_name, location) VALUES
+(10, 'IT', 'New York'),
+(20, 'HR', 'London'),
+(30, 'Sales', 'Tokyo');
+
+-- Step 5️: Insert sample data into 'employees'
+INSERT INTO employees (emp_id, emp_name, dept_id, salary, hire_date, manager_id) VALUES
+(101, 'Alice', 10, 80000, '2015-06-10', 201),
+(102, 'Bob', 20, 60000, '2018-03-15', 202),
+(103, 'Charlie', 10, 95000, '2013-11-22', 201),
+(104, 'David', 30, 70000, '2019-07-01', 203),
+(105, 'Emma', 20, 85000, '2016-01-12', 202);
+
+-- ========================================================
+--  Challenge Question
+-- ========================================================
+-- Write an SQL query to display for each department:
+--   - Department name and location
+--   - Number of employees in that department
+--   - Average salary and maximum salary of that department
+--   - Name of the highest-paid employee in that department
+-- Show only those departments where average salary > 70000,
+-- and sort results by average salary in descending order.
+
+-- ========================================================
+--  Solution Query
+-- ========================================================
+
+
+
+-- ===========================================
+-- End of File
+-- ===========================================

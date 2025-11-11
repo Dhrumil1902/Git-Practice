@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 Changes in master.
+=======
+This is branch file change.
+Brnach details uploading.
+
+>>>>>>> branch_new
 
 This is new file for practice.
 Have a good day.

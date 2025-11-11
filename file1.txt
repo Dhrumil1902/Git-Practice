@@ -3,7 +3,7 @@ Changes in master.
 =======
 This is branch file change.
 Brnach details uploading.
-
+hello yash
 >>>>>>> branch_new
 
 This is new file for practice.
